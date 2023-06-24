@@ -1,0 +1,110 @@
+.create-div {
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  background-color: RGB(240, 239, 255);
+}
+.create-query-btn {
+  font-family: sans-serif;
+  margin: 15px;
+  color: #4b0dba;
+  font-size: 17px;
+  background-color: #ffffff;
+  border: 1px solid #4b0dba;
+}
+.input-query {
+  width: 300px;
+  color: #4b0dba;
+  background-color: #ffffff;
+  border: 1px solid #4b0dba;
+  margin-left: 65%;
+}
+
+/* popup*/
+.main-div{
+  /* height: 100%;
+  width: 100%; */
+  background-color:rgb(233, 233, 233);
+  position: absolute;
+  top:150px;
+  margin-left: 400px;
+  }
+ .popup{
+  height: 570px;
+  width:500px;
+  border-radius: 25px;
+  background-color:rgb(255, 254, 254);
+  margin-top: 50px;
+  margin-left: 25%;
+  border: 1px solid rgb(242, 236, 236);
+  box-shadow:0 8px 32px 0 rgba(9, 9, 9, 0.37);
+  position: absolute;
+}
+ 
+.div-nav {
+  border-radius: 15px;
+  display: flex;
+  background-color: #f7f5fc;
+  width: 500px;
+  
+}
+ .nav-symbol {
+  margin-left:280px;
+  margin-top: 20px;
+  font-size: 20px;
+  opacity: 0.4;
+}
+.nav-text {
+  margin-left: 25px;
+}
+.sub-text {
+  color: #555a8f;
+  font-size: 17px;
+  margin-left: 25px;
+}
+.query-lable {
+  color: #7e8e9f;
+  font-size: 20px;
+  margin-left: 25px;
+}
+.text-area {
+  color: #26282b;
+  border: 1px solid black;
+  margin-left: 25px;
+  width: 450px;
+}
+.query-btn {
+  font-family: "DM Sans", sans-serif;
+  background-color: #4c0dba;
+  color: #ffffff;
+  margin-left: 70%;
+  margin-top: 30px;
+  height: 40px;
+  width: 130px;
+}
+.hr-query {
+  opacity: 0.4;
+}
+.btn-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 15px;
+  margin: 15px;
+}
+.btn-confirm {
+  background-color: #4b0dba;
+  color: #ffffff;
+  height: 50px;
+  width: 100px;
+}
+.btn-cancel {
+   width: 100px;
+  height: 50px;
+  color: #4b0dba;
+  /* border: 1px solid; */
+  border-color: rgb(111,66,193);
+}  
+.btn-cancel:hover{
+  border-color: rgb(111,66,193);
+}
+

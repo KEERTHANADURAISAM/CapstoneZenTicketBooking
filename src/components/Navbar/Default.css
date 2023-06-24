@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.default-nav{
+    background-color: RGB(240, 239, 255);
+    height: 60px;
+    /* margin-left: 155px; */
+    }
+.defaultquery-btn{
+    font-family: sans-serif;
+   margin-top: 8px;
+   padding: 8px;
+    color: #4b0dba;
+    font-size: 17px;
+    background-color: #ffffff;
+    border: 1px solid #4b0dba;
+    margin-left: 200px;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Sidebar.css";
 import zen from "./zen.png";
 import Link from "antd/es/typography/Link";
@@ -8,7 +8,7 @@ const Sidebar = () => {
   const navigate=useNavigate();
   // dashboard page
   const dashboardPage=()=>{
-    navigate('/portal/dashboard')
+    navigate('/')
   }
   // query page
   const queryPage=()=>{
@@ -22,6 +22,10 @@ const Sidebar = () => {
    const capstonePage=()=>{
     navigate('/portal/capstone')
   }
+  // All Queries
+  const allQueryPage=()=>{
+    navigate('/portal/allQuery')
+  }
    // requirmentPage
    const requirmentPage=()=>{
     navigate('/portal/requirment')
@@ -34,6 +38,23 @@ const Sidebar = () => {
   const certificatePage=()=>{
     navigate('/portal/certificate')
   }
+   // My Application
+   const myApplicationPage=()=>{
+    navigate('/portal/myApplication')
+  }
+   // Testimonial
+   const TestimonialPage=()=>{
+    navigate('/portal/testimonial')
+  }
+   // LeaveApplication
+   const leaveApplicationPage=()=>{
+    navigate('/portal/leaveApplication')
+  }
+  const chat=()=>{
+    navigate('/chat')
+  }
+   
+ 
   return (
     <nav className="side-navbar">
       <ul className="sidebar-ul">
@@ -65,6 +86,27 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/portal/queries" className="sidebar-link">
+            <i
+              class="bx bxs-book-content bx-sm bx-flashing-hover"
+              style={{ color: "#555A8F" }}
+            ></i>
+            <span className="nav-item" style={{ color: "#555A8F" }} onClick={allQueryPage}>
+              My Queries
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link className="sidebar-link">
+            <i class="bx bxs-conversation bx-sm bx-flashing-hover"
+              style={{ color: "#555A8F" }}
+            ></i>
+            <span className="nav-item" style={{ color: "#555A8F" }} onClick={chat}>
+              Connect Mentor
+            </span>
+          </Link>
+        </li>
+        <li>
           <Link className="sidebar-link">
             <i
               class="bx bxs-report bx-sm bx-flashing-hover"
@@ -75,6 +117,7 @@ const Sidebar = () => {
             </span>
           </Link>
         </li>
+       
         <li>
           <Link className="sidebar-link">
             <i
@@ -88,8 +131,8 @@ const Sidebar = () => {
         </li>
         <li>
           <Link className="sidebar-link">
-            <i
-              class="bx bx-notepad bx-sm bx-flashing-hover"
+          <i
+              class="bx bxs-report bx-sm bx-flashing-hover"
               style={{ color: "#555A8F" }}
             ></i>
             <span className="nav-item" style={{ color: "#555A8F" }} onClick={requirmentPage}>
@@ -112,6 +155,40 @@ const Sidebar = () => {
           <Link className="sidebar-link">
             <i
               class="bx bx-notepad bx-sm bx-flashing-hover"
+              style={{ color: "#555A8F" }}
+            ></i>
+            <span className="nav-item" style={{ color: "#555A8F" }} onClick={myApplicationPage}>
+              My Applications
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link className="sidebar-link">
+            <i
+              class="bx bx-notepad bx-sm bx-flashing-hover"
+              style={{ color: "#555A8F" }}
+            ></i>
+            <span className="nav-item" style={{ color: "#555A8F" }} onClick={leaveApplicationPage}>
+              Leave Application
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link className="sidebar-link">
+            <i
+              class="bx bx-notepad bx-sm bx-flashing-hover"
+              style={{ color: "#555A8F" }}
+            ></i>
+            <span className="nav-item" style={{ color: "#555A8F" }} onClick={TestimonialPage}>
+              Testimonial
+            </span>
+          </Link>
+        </li>
+                
+        <li>
+          <Link className="sidebar-link">
+            <i
+              class="bx bxs-user-badge bx-sm bx-flashing-hover"
               style={{ color: "#555A8F" }}
             ></i>
             <span className="nav-item" style={{ color: "#555A8F" }} onClick={certificatePage}>

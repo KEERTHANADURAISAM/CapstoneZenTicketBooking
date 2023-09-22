@@ -1,0 +1,45 @@
+.main{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+}
+.capstone-main-head{
+    
+    display: grid;
+   grid-template-columns: repeat(2,300px);
+   gap: 90px;
+    background-color:aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    
+    }
+.capstone-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+.capstone-span{
+    font-size: 28px;
+    font-weight: 500;
+
+    color:RGB(85, 90, 143) !important;
+}
+.capstone-content{
+    color: RGB(126, 142, 159);
+}
+.validation{
+    margin-left: 50px;
+    margin-top: 5px;
+    display: flex;
+    gap:20px;
+    
+}
+.valid-btn{
+    background-color: #FFEBD5;
+    border-radius: 10px;
+    color:#984f00 ;
+    border: none;
+}

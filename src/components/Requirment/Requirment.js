@@ -1,8 +1,11 @@
 import React from 'react'
-import './Requirment.css'
+
 const Requirment = () => {
   return (
-    <div>Requirment</div>
+    <div className='header-certify'>
+    <h1>Content available after completing Placement preparation</h1>
+  </div>
+    
   )
 }
 

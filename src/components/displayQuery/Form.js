@@ -31,8 +31,8 @@ const Form = () => {
       category: "",
       language: "",
       title:"",
-description:"",
-      selectedTime: "",
+      details:"",
+      From: "",
       tillTime:""
     },
     validationSchema,
@@ -111,35 +111,35 @@ description:"",
           <div className="error">{formik.errors.title}</div>
         ) : null}
         {/* description */}
-         <label htmlFor="description"  className="card-sublable">Query Description</label>
+         <label htmlFor="details"  className="card-sublable">Query Description</label>
          <textarea
-          id="description"
+          id="details"
           placeholder="Enter your Query"
-          name="description"
+          name="details"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.description}
+          value={formik.values.details}
           className="query-textarea"
         />
-          {formik.touched.description && formik.errors.description ? (
-          <div className="error">{formik.errors.description}</div>
+          {formik.touched.details && formik.errors.details ? (
+          <div className="error">{formik.errors.details}</div>
         ) : null}
 </div>  
       <div>
-        <label htmlFor="selectedTime" className="card-lable">Your available Time ? ( Ours : 9:00 AM - 7:00 PM )</label>
+        <label htmlFor="From" className="card-lable">Your available Time ? ( Ours : 9:00 AM - 7:00 PM )</label>
         <label className="card-sublable">From</label>
         <input
         className="formInputs"
           type="time"
-          id="selectedTime"
-          name="selectedTime"
+          id="From"
+          name="From"
           max="19.00"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.selectedTime}
+          value={formik.values.From}
         />
-        {formik.touched.selectedTime && formik.errors.selectedTime ? (
-          <div className="error">{formik.errors.selectedTime}</div>
+        {formik.touched.From && formik.errors.From ? (
+          <div className="error">{formik.errors.From}</div>
         ) : null}
         {/* till */}
          

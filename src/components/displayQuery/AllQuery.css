@@ -31,3 +31,6 @@ cursor: pointer;
     width: 100px;
     background-color: #D6FFE4;
 }
+.querybtn-cancel{
+    padding: 10px;
+}

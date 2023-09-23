@@ -64,6 +64,10 @@ box-shadow:0 8px 32px 0 rgba(46, 45, 45, 0.37);
 .query-input:hover{
     border-color: black;
 }
+.error{
+    color: red;
+    margin-left: 380px;
+}
 .querybtn-create {
     background-color:#4B0DBA;
     border-radius: 5px;

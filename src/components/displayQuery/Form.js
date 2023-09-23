@@ -177,14 +177,11 @@ const Form = () => {
             <div className="error">{formik.errors.till}</div>
           ) : null}
         </div>
-        <div className="querybtn-flex">
-          <button type="button" className="querybtn-cancel">
-            Cancel
-          </button>
+       
           <button type="submit" className="querybtn-create">
             Submit
           </button>
-        </div>
+   
       </div>
     </form>
   );

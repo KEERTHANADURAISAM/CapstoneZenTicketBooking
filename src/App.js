@@ -25,10 +25,10 @@ function App() {
   const [{ user }] = useStateValue();
   return (
     <div className="App">
-      <BrowserRouter>
-      {!user ? (
-        <Login />
-      ) : (
+       <BrowserRouter>
+       {/* {!user ? (
+         <Login />
+       ) : ( */}
         <Routes>
           <Route path="/" element={<Dashboard />} />
            <Route path="/portal" element={<Portal query={query} setQuery={setQuery} />}>
@@ -48,7 +48,7 @@ function App() {
             <Route path="/chat" element={<AllChatComponents/>} />
               <Route path="/room/:roomId" element={<AllChatComponents />} />
         </Routes>
-         )}
+        //  )}
       </BrowserRouter> 
       
        

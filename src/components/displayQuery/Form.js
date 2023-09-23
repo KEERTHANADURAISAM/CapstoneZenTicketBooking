@@ -178,7 +178,7 @@ const Form = () => {
           ) : null}
         </div>
         <div className="querybtn-flex">
-          <button type="submit" className="querybtn-cancel">
+          <button type="button" className="querybtn-cancel">
             Cancel
           </button>
           <button type="submit" className="querybtn-create">

@@ -68,8 +68,8 @@ box-shadow:0 8px 32px 0 rgba(46, 45, 45, 0.37);
     background-color:#4B0DBA;
     border-radius: 5px;
     color: #ffffff;
-    
     width: 100px;
+    height: 40px;
     cursor: pointer;
   }
   .querybtn-cancel {

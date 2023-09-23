@@ -19,6 +19,7 @@ import { useStateValue } from "./components/chat/context/StateProvider";
 import AllChatComponents from "./components/chat/AllChatComponents/AllChatComponents";
 import Form from "./components/displayQuery/Form";
 import Login from "./components/chat/login/Login";
+import Dashboardsmall from "./components/Dashboard/Dashboardsmall";
 
 function App() {
   const [query, setQuery] = useState("+ Create Query");
@@ -26,13 +27,14 @@ function App() {
   return (
     <div className="App">
        <BrowserRouter>
-       {/* {!user ? (
+       {!user ? (
          <Login />
-       ) : ( */}
+       ) : (
         <Routes>
           <Route path="/" element={<Dashboard />} />
-           <Route path="/portal" element={<Portal query={query} setQuery={setQuery} />}>
+           <Route path="/portal" element={<Portal />}>
             <Route path="queries" element={<MyQuery query={query} setQuery={setQuery} />}/>
+            <Route path="dashboard" element={<Dashboardsmall/>}/>
             <Route path="createquery" element={<Form />} />
             <Route path="allQuery" element={<AllQuery />} />
             <Route path="capstone" element={<Capstone />} />
@@ -48,7 +50,7 @@ function App() {
             <Route path="/chat" element={<AllChatComponents/>} />
               <Route path="/room/:roomId" element={<AllChatComponents />} />
         </Routes>
-        //  )}
+         )}
       </BrowserRouter> 
       
        

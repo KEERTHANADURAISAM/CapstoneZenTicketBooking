@@ -32,7 +32,7 @@ const Login = () => {
       <div className="login-container">
         <img src={chat} alt="chat" className="chat-icon" />
         <div className="login-text">
-          <h1>Login to Live Chat-App</h1>
+          <h1>Zen Login Form</h1>
         </div>
         <Button onClick={signin}>Sign in With Google</Button>
       </div>

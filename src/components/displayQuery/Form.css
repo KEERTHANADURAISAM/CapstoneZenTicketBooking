@@ -79,7 +79,7 @@ box-shadow:0 8px 32px 0 rgba(46, 45, 45, 0.37);
   .querybtn-cancel {
      width: 100px;
      border-radius: 5px;
-    
+    height: 40px;
     color: #4b0dba;
     border-color: rgb(111,66,193);
     cursor: pointer;

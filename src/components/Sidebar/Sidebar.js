@@ -8,7 +8,7 @@ const Sidebar = () => {
   const navigate=useNavigate();
   // dashboard page
   const dashboardPage=()=>{
-    navigate('/')
+    navigate('/portal/dashboard')
   }
   // query page
   const queryPage=()=>{

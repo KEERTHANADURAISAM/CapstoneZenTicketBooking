@@ -4,27 +4,38 @@ import * as Yup from "yup";
 import "./Form.css";
 import { DownOutlined } from "@ant-design/icons";
 import axios from "axios";
+import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const validationSchema = Yup.object({
   category: Yup.string().required("Category is required"),
   language: Yup.string().required(" Language is required"),
   title: Yup.string().required(" Query Title is required"),
-  description: Yup.string().max(300, "Description is too long"),
-  selectedTime: Yup.string()
+  details: Yup.string().max(300, "Description is too long"),
+  From: Yup.string()
     .required("Time is required")
     .matches(
-      /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/,
-      "Invalid time format (HH:MM)"
+      /^(0[1-9]|1[0-2]):[0-5][0-9]( (AM|PM))?$/i,
+      "Invalid time format (hh:mm AM/PM)"
     ),
-  tillTime: Yup.string()
+  till: Yup.string()
     .required("Time is required")
     .matches(
-      /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/,
-      "Invalid time format (HH:MM)"
+      /^(0[1-9]|1[0-2]):[0-5][0-9]( (AM|PM))?$/i,
+      "Invalid time format (hh:mm AM/PM)"
     ),
+
 });
 
 const Form = () => {
+
+  const navigate = useNavigate()
+  // All Queries
+  const cancelPage=()=>{
+   navigate('/portal/dashboard')
+  }
+
+
   const formik = useFormik({
     initialValues: {
       category: "",
@@ -38,16 +49,16 @@ const Form = () => {
     onSubmit: async (values) => {
       console.log(values);
       try {
-        const response = await axios.post(
+        const queries = await axios.post(
           "https://zen-server.onrender.com/create-query",
           values
         );
-        alert("Query created successfully");
-        console.log(response.data); // Log the response data from the server
-      } catch (error) {
-        console.error(error.message);
-        // Handle the error as needed (e.g., show an error message to the user)
+        alert("Successfully created");
+        console.log(queries);
+      } catch (err) {
+        console.log(err);
       }
+      navigate('/portal/allQuery')
     },
   });
 
@@ -69,9 +80,10 @@ const Form = () => {
           <option value="" label=" ---Select Category---">
             <DownOutlined className="downoutlined-icon" />
           </option>
+       
           <option value="Zen-Class Doubt" label="Zen-Class Doubt" />
-          <option value="Placement Related" label="Placement Related" />
-          <option value="Coordination Related" label="Coordination Related" />
+          <option value="Placement-Related" label="Placement-Related" />
+          <option value="Coordination-Related" label="Coordination-Related" />
           <option value="Pre-Bootcamp Related" label="Pre-Bootcamp Related" />
         </select>
         {formik.touched.category && formik.errors.category ? (
@@ -129,8 +141,8 @@ const Form = () => {
           </label>
           <textarea
             id="details"
-            placeholder="Enter your Query"
             name="details"
+            placeholder="Enter your Query"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.details}
@@ -147,10 +159,11 @@ const Form = () => {
           <label className="card-sublable">From</label>
           <input
             className="formInputs"
-            type="time"
+            type="text"
             id="From"
             name="From"
-            max="19.00"
+            placeholder="hh:mm AM/PM"
+      
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.From}
@@ -165,10 +178,11 @@ const Form = () => {
           </label>
           <input
             className="formInputs"
-            type="time"
+            type="text"
             id="till"
             name="till"
-            max="19.00"
+            placeholder="hh:mm AM/PM"
+   
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.till}
@@ -177,11 +191,10 @@ const Form = () => {
             <div className="error">{formik.errors.till}</div>
           ) : null}
         </div>
-       
-          <button type="submit" className="querybtn-create">
-            Submit
-          </button>
-   
+        <div className="querybtn-flex">
+          <Button type="submit" className="querybtn-cancel" onClick={cancelPage}>Cancel</Button>
+        <button type="submit" className="querybtn-create">Submit</button>
+        </div>
       </div>
     </form>
   );

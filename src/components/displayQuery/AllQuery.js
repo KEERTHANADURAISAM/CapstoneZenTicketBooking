@@ -34,7 +34,7 @@ const AllQuery = () => {
                 </div>
                 <div className='quey-solve'>
                   <Button  className='query-solve-btn'>Closed</Button>
-                  <span>{formatDate(query.dateFrom)}</span>
+                  <span>{query.From}</span>
                   </div>
               </div>
   ))}
